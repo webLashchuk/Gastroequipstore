@@ -1,0 +1,44 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.portfolio {
+  padding: rem(70) 0;
+  background-color: var(--color-blue-100);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(60) rem(25);
+    justify-content: center;
+  }
+
+  p {
+    margin-bottom: rem(50);
+  }
+
+  @include media(desktop) {
+    &__grid {
+      grid-template-columns: repeat(2, minmax(350px, 392px));
+    }
+  }
+
+  @include media(mobile-l) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &--listings {
+    padding: rem(60) 0 rem(68);
+
+    h2 {
+      +p {
+        margin-bottom: rem(76);
+      }
+    }
+
+    .portfolio__grid {
+      margin-bottom: rem(35);
+    }
+  }
+}

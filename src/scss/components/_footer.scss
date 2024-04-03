@@ -1,0 +1,63 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.footer {
+  padding: rem(40) 0;
+  color: var(--color-white);
+  background-color: var(--color-blue-800);
+  font-weight: --fw-500;
+  font-size: 18px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include media(tablet-wide) {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: rem(30);
+    }
+  }
+
+  .nav {
+    margin-bottom: 25px;
+
+    &__inner {
+      justify-content: flex-end;
+    }
+
+    &__list {
+      margin: 0;
+
+      @include media(tablet) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: rem(20);
+
+        @include media(tablet-wide) {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    &__link {
+      color: var(--color-white);
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  button.formsapp-popup-button,
+  .btn {
+    padding: 10px 16px !important;
+  }
+}

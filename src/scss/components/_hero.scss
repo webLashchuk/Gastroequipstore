@@ -1,0 +1,92 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.hero {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 584px;
+    padding: 0 30 0 105px;
+  }
+
+  &__content {
+    position: relative;
+    max-width: 600px;
+    z-index: 1;
+    height: 100%;
+
+    >* {
+      color: var(--color-white);
+    }
+
+    h1 {
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin-bottom: 60px;
+      font-weight: var(--fw-500);
+      font-size: 22px;
+    }
+
+    .btn {
+      max-width: 251px;
+    }
+
+    &--simple {
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  &--small {
+    min-height: auto;
+    max-height: 477px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media(tablet) {
+    min-height: 700px;
+    padding-top: 0;
+
+    &__content {
+      max-width: 90%;
+      padding: 20px;
+    }
+
+    &__inner {
+      min-height: 300px;
+      padding: 0 30;
+    }
+  }
+
+  @include media(mobile-l) {
+    padding-top: 0;
+
+    &__content {
+      max-width: 100%;
+      padding: 20px;
+    }
+
+    &__inner {
+      min-height: 300px;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Portfolio"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "portfolio"}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero-simple.html">
+        {
+        "image":"portfolio.jpg",
+        "title":"Immerse Yourself in Inspiring Spaces",
+        "text":"Explore Our Portfolio of Exquisite Designs for Cafes, Bars, and Restaurants",
+        "class":"simple"
+        }
+      </include>
+
+      <include src="./html/portfolio/_categories.html"></include>
+
+      <include src="./html/portfolio/_portfolio.html"></include>
+
+      <include src="./html/_contact.html"></include>
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

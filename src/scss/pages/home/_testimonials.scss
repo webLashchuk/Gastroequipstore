@@ -1,0 +1,47 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.testimonials {
+  padding: rem(60) 0;
+
+  h2 {
+    +p {
+      margin-bottom: rem(80);
+    }
+  }
+
+  &__item {
+    max-width: 495px;
+    width: 100%;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 495px));
+    justify-content: center;
+    gap: rem(15);
+
+    p {
+      font-size: 18px;
+      line-height: 1.55;
+      font-weight: var(--fw-500);
+    }
+
+    h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: calc(var(--radius-main) * 6 - 4px);
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Catalog"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "catalog"}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero-simple.html">
+        {
+        "image":"catalog.jpg",
+        "title":"Elevate Your Space with Style and Functionality",
+        "text":"Explore Our Range of Products for Cafe, Bar, and Restaurant Outfitting",
+        "class":"simple"
+        }
+      </include>
+
+      <include src="./html/catalog/_categories.html"></include>
+
+      <include src="./html/catalog/_listings.html"></include>
+
+      <include src="./html/_contact.html"></include>
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

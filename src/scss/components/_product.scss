@@ -1,0 +1,94 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.product {
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+  h3 {
+    font-size: 22px;
+    height: 100%;
+    margin-bottom: 15px;
+    color: inherit;
+  }
+
+  p {
+    max-width: 233px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+    padding: 0 !important;
+    margin-bottom: rem(20) !important;
+  }
+
+  span {
+    display: inline-block;
+    align-self: flex-end;
+    transition: color .2s;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: rem(20);
+  }
+
+  &--article {
+    display: flex;
+  }
+
+  &--listing {
+    max-width: 392px;
+
+    @include media(desktop) {
+      max-width: 100%;
+    }
+
+    img {
+      max-width: 392px;
+      width: 100%;
+      height: 392px;
+
+      @include media(desktop) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &--offer {
+    .product__image {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background-color: var(--color-red-800);
+        width: 145px;
+        height: 45px;
+      }
+
+      &::after {
+        position: absolute;
+        content: "Special Dials";
+        font-size: 22px;
+        font-weight: var(--fw-500);
+        color: var(--color-white);
+        top: 22px;
+        right: 24px;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    span {
+      color: var(--color-blue-600) !important;
+    }
+  }
+}

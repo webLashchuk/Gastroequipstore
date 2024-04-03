@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Services"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "services"}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero-simple.html">
+        {
+        "image":"services.jpg",
+        "title":"Elevate Your Dining Experience",
+        "text":"Crafting Atmospheres, Inspiring Moments: Your Premier Destination for Cafe, Bar, and Restaurant
+        Outfitting",
+        "class":"simple"
+        }
+      </include>
+      <include src="./html/_service.html">
+        {
+        "class":"service--services"
+        }
+      </include>
+
+      <include src="./html/services/_gallery.html"></include>
+
+      <include src="./html/services/_solution.html"></include>
+
+      <include src="./html/_contact.html"></include>
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

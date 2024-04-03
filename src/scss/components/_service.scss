@@ -1,0 +1,88 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.service {
+  padding: rem(65) 0 rem(25);
+
+  &--home {
+    .grid {
+      margin-bottom: rem(32);
+      gap: 20px;
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        padding-top: 110px;
+        height: 100%;
+        position: relative;
+        border: 2px solid var(--color-blue-400);
+        border-radius: calc(var(--radius-main) * 2 - 4px);
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: block;
+          right: 30px;
+          top: 30px;
+          margin-bottom: 22px;
+          width: 100px;
+          height: 84px;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+
+          @include media(mobile-l) {
+            width: 80px;
+            height: 64px;
+          }
+        }
+
+        p {
+          max-width: 233px;
+          text-transform: uppercase;
+          font-size: 14px;
+          line-height: 1.5;
+          letter-spacing: 0.1rem;
+          margin: auto 0 10px;
+        }
+
+        h3 {
+          font-size: 42px;
+
+          @include media(tablet-wide) {
+            font-size: 28px;
+          }
+        }
+
+        &--planning {
+          &::before {
+            background-image: url("../images/icons/planning.svg");
+          }
+        }
+
+        &--procurement {
+          &::before {
+            background-image: url("../images/icons/procurement.svg");
+          }
+        }
+
+        &--installation {
+          &::before {
+            background-image: url("../images/icons/installation.svg");
+          }
+        }
+
+        &--customization {
+          &::before {
+            background-image: url("../images/icons/customization.svg");
+          }
+        }
+
+      }
+    }
+  }
+
+  &--services {
+    background-color: var(--color-blue-100);
+  }
+}
