@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "classic bistro chair"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header-secondary.html" locals='{"page": "classic bistro chair"}'></include>
+
+    <main class="main">
+      <include src="./html/article/_article.html">
+        {
+        "link":"catalog.html",
+        "image":"refrigerator.jpg",
+        "class":"offer",
+        "category":"Kitchen Equipment",
+        "title":"Commercial Refrigerator",
+        "properties":"Craft perfect cocktails with our professional cocktail shaker set. Made from high-quality
+        stainless steel and including all essential tools, this set is a must-have for any bar enthusiast.",
+        "titleSmall": "Technical Specifications:",
+        "text": "Stainless steel construction. Set includes shaker, strainer, jigger, and mixing spoon."
+        }
+      </include>
+    </main>
+
+    <include src="./html/_contact.html"></include>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

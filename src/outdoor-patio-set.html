@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "classic bistro chair"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header-secondary.html" locals='{"page": "classic bistro chair"}'></include>
+
+    <main class="main">
+      <include src="./html/article/_article.html">
+        {
+        "link":"catalog.html",
+        "image":"patio-set.jpg",
+        "class":"",
+        "category":"Tables",
+        "title":"Outdoor Patio Set",
+        "properties":"Embrace al fresco dining with our outdoor patio set. Made from weather-resistant materials and
+        featuring a sleek modern design, this set is perfect for enjoying meals in the fresh air.",
+        "titleSmall": "Technical Specifications:",
+        "text": "Weather-resistant materials. Set includes table and chairs. Dimensions vary based on configuration."
+        }
+      </include>
+    </main>
+
+    <include src="./html/_contact.html"></include>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "classic bistro chair"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header-secondary.html" locals='{"page": "classic bistro chair"}'></include>
+
+    <main class="main">
+      <include src="./html/article/_article.html">
+        {
+        "link":"catalog.html",
+        "image":"light.jpg",
+        "class":"",
+        "category":"Lighting",
+        "title":"Vintage Pendant Light",
+        "properties":"Add a touch of nostalgia to your space with our vintage pendant light. Featuring an antique brass
+        finish and a clear glass shade, this light fixture creates a warm and inviting ambiance.",
+        "titleSmall": "Technical Specifications:",
+        "text": "Antique brass finish with clear glass shade. Dimensions: 10' diameter x 12' H."
+        }
+      </include>
+    </main>
+
+    <include src="./html/_contact.html"></include>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

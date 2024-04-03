@@ -135,6 +135,22 @@
     padding: 16px 80px;
   }
 
+  @include media(tablet-wide) {
+    input {
+      &:hover::placeholder {
+        filter: var(--color-gray-800);
+        color: var(--color-gray-800);
+      }
+    }
+
+    a {
+      &:hover {
+        filter: var(--color-gray-800);
+        color: var(--color-gray-800);
+      }
+    }
+  }
+
   @include media(mobile-l) {
     &__wrapper {
       padding: 40px;

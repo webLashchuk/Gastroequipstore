@@ -1,0 +1,28 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.offer {
+  .product-image {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background-color: var(--color-red-800);
+      width: 145px;
+      height: 45px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "Special Dials";
+      font-size: 22px;
+      font-weight: var(--fw-500);
+      color: var(--color-white);
+      top: 22px;
+      right: 24px;
+    }
+  }
+}

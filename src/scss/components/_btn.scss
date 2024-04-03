@@ -39,13 +39,6 @@
     }
   }
 
-  @include media(mobile-s) {
-    margin: 0 auto;
-    // padding-left: 40px !important;
-    width: max-content;
-    min-width: auto;
-  }
-
   &--order {
     font-size: 16px;
     color: var(--color-white);
@@ -78,11 +71,10 @@
       transition-duration: 0.2s;
     }
 
-
     &:hover,
     &:focus {
       &::after {
-        filter: invert(97%) sepia(7%) saturate(33%) hue-rotate(97deg) brightness(94%) contrast(93%);
+        filter: var(--filter-blue-800);
       }
     }
   }
@@ -92,37 +84,38 @@
       transform: translateY(-53%) rotate(180deg);
     }
   }
+
+  @include media(tablet-wide) {
+
+    &:hover,
+    &:focus {
+      color: var(--color-white) !important;
+      background-color: var(--color-blue-200);
+    }
+
+    &--user {
+
+      &:hover,
+      &:focus {
+        border-color: transparent;
+        color: var(--color-blue-800) !important;
+        background-color: var(--color-white);
+      }
+    }
+
+    &--arrow {
+
+      &:hover {
+        &::after {
+          filter: var(--filter-white);
+        }
+      }
+    }
+  }
+
+  @include media(mobile-s) {
+    margin: 0 auto;
+    width: max-content;
+    min-width: auto;
+  }
 }
-
-// button.formsapp-popup-button {
-//   margin: 0 !important;
-//   padding: 7px 16px !important;
-// }
-
-// *[class].request-btn {
-//   position: relative;
-//   display: flex;
-//   justify-content: space-between;
-//   font-weight: var(--fw-600);
-//   font-size: 15px;
-//   color: var(--color-blue-400) !important;
-
-//   &::after {
-//     content: "";
-//     position: relative;
-//     right: 0;
-//     width: 10px;
-//     height: 18px;
-//     background-image: var(--arrow);
-//     background-position: 0 0;
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//     transition-property: filter;
-//     transition-duration: 0.2s;
-//   }
-
-//   &:hover::after,
-//   &:focus::after {
-//     filter: invert(0);
-//   }
-// }

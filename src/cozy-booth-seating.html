@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "classic bistro chair"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header-secondary.html" locals='{"page": "classic bistro chair"}'></include>
+
+    <main class="main">
+      <include src="./html/article/_article.html">
+        {
+        "link":"catalog.html",
+        "image":"seating.jpg",
+        "class":"offer",
+        "category":"Seating",
+        "title":"Cozy Booth Seating",
+        "properties":"Create intimate dining spaces with our cozy booth seating. Upholstered in premium fabric and
+        featuring a plush cushioned backrest, these booths offer privacy and comfort for guests.",
+        "titleSmall": "Technical Specifications:",
+        "text": "Upholstered fabric with cushioned backrest. Dimensions: Varies based on customization."
+        }
+      </include>
+    </main>
+
+    <include src="./html/_contact.html"></include>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>
