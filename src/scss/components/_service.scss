@@ -2,17 +2,17 @@
 @use "../utils/mixins/"as*;
 
 .service {
-  padding: rem(65) 0 rem(25);
+  padding: rem(65) 0 rem(65);
 
   &--home {
     .grid {
-      margin-bottom: rem(32);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
 
       &__item {
         display: flex;
         flex-direction: column;
-        padding-top: 110px;
+        padding: rem(125) rem(35) rem(20);
         height: 100%;
         position: relative;
         border: 2px solid var(--color-blue-400);
@@ -21,12 +21,10 @@
         &::before {
           content: "";
           position: absolute;
-          display: block;
-          right: 30px;
-          top: 30px;
-          margin-bottom: 22px;
+          right: 35px;
+          top: 34px;
           width: 100px;
-          height: 84px;
+          height: 100px;
           background-position: center;
           background-size: contain;
           background-repeat: no-repeat;
@@ -42,8 +40,8 @@
           text-transform: uppercase;
           font-size: 14px;
           line-height: 1.5;
-          letter-spacing: 0.1rem;
-          margin: auto 0 10px;
+          letter-spacing: 0.12rem;
+          margin: auto 0 7px;
         }
 
         h3 {

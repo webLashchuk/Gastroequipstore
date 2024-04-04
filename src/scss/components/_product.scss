@@ -10,7 +10,8 @@
   h3 {
     font-size: 22px;
     height: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
+    line-height: 1.2;
     color: inherit;
   }
 
@@ -20,8 +21,8 @@
     font-size: 14px;
     line-height: 1.5;
     letter-spacing: 0.1rem;
-    padding: 0 !important;
-    margin-bottom: rem(20) !important;
+    padding: 0;
+    margin-bottom: rem(10);
   }
 
   span {
@@ -58,17 +59,17 @@
   &:hover,
   &:focus {
     span {
-      color: var(--color-blue-600) !important;
+      color: var(--color-blue-600);
     }
   }
 
   @include media(tablet-wide) {
 
-  &:hover,
-  &:focus {
-    span {
-      color: var(--color-blue-800) !important;
+    &:hover,
+    &:focus {
+      span {
+        color: var(--color-blue-800);
+      }
     }
   }
-}
 }

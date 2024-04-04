@@ -1,5 +1,5 @@
-@use "../../utils/functions/"as*;
-@use "../../utils/mixins/"as*;
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
 
 .categories {
   background-color: var(--color-white);
@@ -158,12 +158,6 @@
   &--portfolio {
     img {
       height: 470px;
-    }
-  }
-
-  &:hover {
-    h3 {
-      color: var(--color-blue-200);
     }
   }
 

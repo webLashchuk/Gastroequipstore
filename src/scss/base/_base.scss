@@ -8,7 +8,6 @@ body {
 }
 
 .page {
-  height: var(--vh);
   font-family: var(--font-family-primary);
   font-weight: var(--fw-700);
   font-style: normal;
@@ -71,7 +70,6 @@ body {
 .logo {
   max-width: 214px;
   width: 100%;
-  order: 2;
 
   img {
     max-width: 214px;

@@ -5,7 +5,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding: rem(60) 0 rem(84);
+  padding: rem(68) 0 rem(64);
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,13 +16,14 @@
 
   & .title {
     color: var(--color-white);
+    line-height: 1.25;
     margin-bottom: 0;
 
     +p {
       max-width: 800px;
       color: var(--color-white);
       opacity: 0.6;
-      margin-bottom: 0;
+      margin-bottom: rem(14);
     }
   }
 
@@ -30,10 +31,10 @@
     display: flex;
     flex-direction: column;
     border-radius: var(--radius-main);
-    padding: rem(60) rem(60) rem(100);
+    padding: rem(62) rem(60) rem(93);
     font-size: 14px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1010px;
     margin: 0 auto;
     background-color: rgba(225, 224, 221, 0.95);
   }
@@ -71,7 +72,7 @@
   label {
     display: block;
     margin-bottom: 24px;
-    font-size: 15px;
+    font-size: 16px;
 
     &:last-of-type {
       margin-bottom: 48px;
@@ -100,7 +101,7 @@
   input {
     border-color: transparent;
     border-radius: var(--radius-main);
-    padding: 17px;
+    padding: 18px;
     width: 100%;
     color: var(--color-gray-800);
     background-color: var(--color-white);
@@ -132,7 +133,7 @@
   }
 
   .btn {
-    padding: 16px 80px;
+    padding: 17px 80px;
   }
 
   @include media(tablet-wide) {

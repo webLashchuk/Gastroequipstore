@@ -2,15 +2,16 @@
 @use "../utils/mixins/"as*;
 
 .footer {
-  padding: rem(40) 0;
+  padding: rem(52) 0 rem(53);
   color: var(--color-white);
   background-color: var(--color-blue-800);
-  font-weight: --fw-500;
+  font-weight: var(--fw-500);
   font-size: 18px;
 
   &__inner {
     display: flex;
     justify-content: space-between;
+    margin-bottom: rem(20);
 
     @include media(tablet-wide) {
       flex-direction: column-reverse;
@@ -20,8 +21,6 @@
   }
 
   .nav {
-    margin-bottom: 25px;
-
     &__inner {
       justify-content: flex-end;
     }
@@ -38,7 +37,7 @@
 
     &__item {
       &:not(:last-child) {
-        margin-right: rem(20);
+        margin-right: rem(31);
 
         @include media(tablet-wide) {
           margin-right: 20px;
@@ -48,6 +47,12 @@
 
     &__link {
       color: var(--color-white);
+      font-size: 18px;
+      padding: 0;
+
+      @include media(tablet-wide) {
+        padding: 10px 0;
+      }
     }
   }
 
