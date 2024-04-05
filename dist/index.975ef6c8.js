@@ -562,10 +562,11 @@ var _config = require("./js/_config");
 var _components = require("./js/_components");
 
 },{"./js/_functions":"8TNrF","./js/_config":"llBLd","./js/_components":"b1Ec9"}],"b1Ec9":[function(require,module,exports) {
+var _showBtnJs = require("./components/_show-btn.js");
 var _burger = require("./components/_burger");
 var _slider = require("./components/_slider");
 
-},{"./components/_burger":"aATkn","./components/_slider":"303C2"}],"aATkn":[function(require,module,exports) {
+},{"./components/_burger":"aATkn","./components/_slider":"303C2","./components/_show-btn.js":"eYmKq"}],"aATkn":[function(require,module,exports) {
 const navigation = document.querySelector(".nav");
 const page = document.querySelector(".page");
 navigation?.addEventListener("click", onBurgerBtnClick);
@@ -8580,6 +8581,23 @@ function EffectCards({ swiper , extendParams , on  }) {
 }
 exports.default = EffectCards;
 
-},{"../../shared/create-shadow.js":"9JYAP","../../shared/effect-init.js":"5DnvG","../../shared/effect-target.js":"eKqS8","../../shared/effect-virtual-transition-end.js":"VhYFx","../../shared/utils.js":"dbikn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["jC2qd","8lqZg"], "8lqZg", "parcelRequire46ec")
+},{"../../shared/create-shadow.js":"9JYAP","../../shared/effect-init.js":"5DnvG","../../shared/effect-target.js":"eKqS8","../../shared/effect-virtual-transition-end.js":"VhYFx","../../shared/utils.js":"dbikn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eYmKq":[function(require,module,exports) {
+document.querySelector(".btn--arrow")?.addEventListener("click", (e)=>{
+    if (e.currentTarget.classList.contains("show")) {
+        e.currentTarget.classList.remove("btn--open");
+        e.currentTarget.textContent = "Show All";
+    } else {
+        e.currentTarget.classList.add("btn--open");
+        e.currentTarget.textContent = "Hide";
+    }
+    e.currentTarget.classList.toggle("show");
+    const articles = document.querySelectorAll(".portfolio__item:nth-child(n+7)"); // Выбираем последние 3 товара
+    articles.forEach((article)=>{
+        article.classList.toggle("show");
+    });
+// e.currentTarget.previousElementSibling.classList.toggle('show');
+});
+
+},{}]},["jC2qd","8lqZg"], "8lqZg", "parcelRequire46ec")
 
 //# sourceMappingURL=index.975ef6c8.js.map

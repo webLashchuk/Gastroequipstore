@@ -16,7 +16,7 @@
     justify-content: center;
     overflow: hidden;
     min-height: 584px;
-    padding: 0 30 0 104px;
+    padding-inline: 104px 30px;
   }
 
   &__content {
@@ -72,7 +72,7 @@
 
     &__inner {
       min-height: 300px;
-      padding: 0 30;
+      padding: 0 30px;
     }
   }
 

@@ -105,7 +105,7 @@
   --filter-gray-800: invert(32%) sepia(3%) saturate(0%) hue-rotate(91deg) brightness(103%) contrast(90%);
   --radius-main: 12px;
   --gradient: linear-gradient(90deg, #000000b1 15%, #00000081 40%);
-  --arrow: url("data:image/svg+xml,  <svg width=\"21\" height=\"20\" viewBox=\"0 0 21 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">   <path d=\"M17.1004 7.45834L11.6671 12.8917C11.0254 13.5333 9.97539 13.5333 9.33372 12.8917L3.90039 7.45834\" stroke=\"white\" stroke-width=\"1.5\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>   </svg>");
+  --arrow: url("data:image/svg+xml,  <svg width=\"21\" height=\"20\" viewBox=\"0 0 21 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">   <path d=\"M17.1004 7.45834L11.6671 12.8917C11.0254 13.5333 9.97539 13.5333 9.33372 12.8917L3.90039 7.45834\" stroke=\"black\" stroke-width=\"1.5\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>   </svg>");
   --user: url("data:image/svg+xml,<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">   <path d=\"M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM7.35 18.5C8.66 17.56 10.26 17 12 17C13.74 17 15.34 17.56 16.65 18.5C15.34 19.44 13.74 20 12 20C10.26 20 8.66 19.44 7.35 18.5ZM18.14 17.12C16.45 15.8 14.32 15 12 15C9.68 15 7.55 15.8 5.86 17.12C4.7 15.73 4 13.95 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 13.95 19.3 15.73 18.14 17.12Z\" fill=\"black\" fill-opacity=\"0.6\"/>   <path d=\"M12 6C10.07 6 8.5 7.57 8.5 9.5C8.5 11.43 10.07 13 12 13C13.93 13 15.5 11.43 15.5 9.5C15.5 7.57 13.93 6 12 6ZM12 11C11.17 11 10.5 10.33 10.5 9.5C10.5 8.67 11.17 8 12 8C12.83 8 13.5 8.67 13.5 9.5C13.5 10.33 12.83 11 12 11Z\" fill=\"black\" fill-opacity=\"0.6\"/>   </svg>");
   --mail: url("data:image/svg+xml,<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">   <path d=\"M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 18H4V8L12 13L20 8V18ZM12 11L4 6H20L12 11Z\" fill=\"black\" fill-opacity=\"0.6\"/>   </svg>");
   --arrow-right: url("data:image/svg+xml,  <svg width=\"14\" height=\"12\" viewBox=\"0 0 14 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">   <path d=\"M0.414531 6.39804L5.47703 11.4605C5.58258 11.5661 5.72573 11.6254 5.875 11.6254C6.02427 11.6254 6.16742 11.5661 6.27297 11.4605C6.37852 11.355 6.43781 11.2118 6.43781 11.0626C6.43781 10.9133 6.37852 10.7701 6.27297 10.6646L2.17023 6.56257H13.1875C13.3367 6.56257 13.4798 6.50331 13.5852 6.39782C13.6907 6.29233 13.75 6.14925 13.75 6.00007C13.75 5.85088 13.6907 5.70781 13.5852 5.60232C13.4798 5.49683 13.3367 5.43757 13.1875 5.43757H2.17023L6.27297 1.33554C6.37852 1.22999 6.43781 1.08684 6.43781 0.937569C6.43781 0.788301 6.37852 0.645148 6.27297 0.5396C6.16742 0.434052 6.02427 0.374756 5.875 0.374756C5.72573 0.374756 5.58258 0.434052 5.47703 0.5396L0.414531 5.6021C0.362232 5.65434 0.320742 5.71638 0.292435 5.78466C0.264127 5.85295 0.249558 5.92615 0.249558 6.00007C0.249558 6.07399 0.264127 6.14719 0.292435 6.21547C0.320742 6.28376 0.362232 6.3458 0.414531 6.39804Z\" fill=\"black\"/>   </svg>");
@@ -205,6 +205,10 @@ html, body {
   .logo {
     order: 1;
   }
+}
+
+.show {
+  display: none;
 }
 
 .hidden {
@@ -316,7 +320,7 @@ p {
   width: 100%;
   background-color: #0000;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   transition-property: transform, padding;
   transition-duration: .15s;
   position: fixed;
@@ -433,13 +437,21 @@ p {
   text-transform: capitalize;
   color: var(--color-dark-450);
   background-color: #0000;
+  border-bottom: 1px solid #0000;
   padding: 10px 0;
   font-size: 16px;
+  transition: color .2s;
   display: inline-block;
 }
 
-.nav__link.true {
-  border-bottom: 1px solid var(--color-dark-400);
+.nav .true {
+  border-color: var(--color-white);
+}
+
+@media only screen and (max-width: 992px) {
+  .nav .true {
+    border-color: #0000;
+  }
 }
 
 .nav__btns {
@@ -520,7 +532,7 @@ p {
   position: relative;
 }
 
-[class].btn:hover, [class].btn:focus {
+[class].btn:hover {
   background-color: var(--color-white);
   color: var(--color-blue-800) !important;
 }
@@ -532,7 +544,7 @@ p {
   padding: 9px 16px !important;
 }
 
-[class].btn--user:hover, [class].btn--user:focus {
+[class].btn--user:hover {
   background-color: var(--color-blue-200);
   border-color: #0000;
   color: var(--color-white) !important;
@@ -546,6 +558,7 @@ p {
 
 [class].btn--request {
   color: var(--color-white);
+  margin: 0;
   padding: 18px 64px;
   font-size: 20px;
 }
@@ -560,6 +573,7 @@ p {
   width: 25px;
   height: 25px;
   background-image: var(--arrow);
+  filter: var(--filter-white);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: contain;
@@ -571,7 +585,15 @@ p {
   transform: translateY(-53%);
 }
 
-[class].btn--arrow:hover:after, [class].btn--arrow:focus:after {
+[class].btn--arrow:hover:after {
+  filter: var(--filter-blue-800);
+}
+
+[class].btn--open:hover {
+  background-color: var(--color-white);
+}
+
+[class].btn--open:hover:after {
   filter: var(--filter-blue-800);
 }
 
@@ -580,15 +602,19 @@ p {
 }
 
 @media only screen and (max-width: 1180px) {
-  [class].btn:hover, [class].btn:focus {
+  [class].btn:hover {
     background-color: var(--color-blue-200);
     color: var(--color-white) !important;
   }
 
-  [class].btn--user:hover, [class].btn--user:focus {
+  [class].btn--user:hover {
     background-color: var(--color-white);
     border-color: #0000;
     color: var(--color-blue-800) !important;
+  }
+
+  [class].btn--arrow:hover {
+    background-color: var(--color-white);
   }
 
   [class].btn--arrow:hover:after {
@@ -973,7 +999,7 @@ p {
 .article h2 {
   font-size: 22px;
   font-weight: var(--fw-500);
-  margin-bottom: 2.8125rem;
+  margin-bottom: 2.5rem;
   padding: 0;
 }
 
@@ -985,10 +1011,11 @@ p {
 .article__text p {
   text-transform: uppercase;
   width: 100%;
-  letter-spacing: .1rem;
+  letter-spacing: .12rem;
   color: var(--color-gray-800);
   padding: 0;
   font-size: 14px;
+  line-height: 1.5;
 }
 
 .article__text p:not(:last-child) {
@@ -1007,6 +1034,10 @@ p {
 }
 
 @media only screen and (max-width: 1180px) {
+  .article {
+    padding: 135px 15px;
+  }
+
   .article__arrow:hover {
     color: var(--color-blue-800);
   }
@@ -1018,24 +1049,16 @@ p {
 
 @media only screen and (max-width: 768px) {
   .article {
-    padding: 130px 15px;
+    padding: 100px 15px;
   }
 
   .article__inner {
     flex-direction: column;
   }
 
-  .article .product-image {
+  .article .product-image, .article img, .article .text {
     max-width: 100%;
     width: 100%;
-  }
-
-  .article img {
-    width: 100%;
-  }
-
-  .article__text {
-    max-width: 100%;
   }
 }
 
@@ -1112,20 +1135,26 @@ p {
   margin-bottom: 24px;
   font-size: 16px;
   display: block;
+  position: relative;
 }
 
 .contact label:last-of-type {
   margin-bottom: 48px;
 }
 
-.contact label:nth-child(1) input::placeholder {
+.contact label:nth-child(1):before, .contact label:nth-child(2):before {
+  content: "";
   background: var(--user) no-repeat;
+  width: 24px;
+  height: 24px;
   background-position: 0;
+  position: absolute;
+  top: 18px;
+  left: 20px;
 }
 
-.contact label:nth-child(2) input::placeholder {
+.contact label:nth-child(2):before {
   background: var(--mail) no-repeat;
-  background-position: 0;
 }
 
 .contact input {
@@ -1138,8 +1167,6 @@ p {
 }
 
 .contact input::placeholder {
-  background-size: 24px 24px;
-  padding-left: 36px;
   transition: color .2s, filter .3s;
 }
 
@@ -1159,13 +1186,16 @@ p {
   background: none;
 }
 
+.contact input[type="text"], .contact input[type="email"] {
+  padding-left: 55px;
+}
+
 .contact .btn {
   padding: 17px 80px;
 }
 
 @media only screen and (max-width: 1180px) {
   .contact input:hover::placeholder, .contact a:hover {
-    filter: var(--color-gray-800);
     color: var(--color-gray-800);
   }
 }
@@ -1333,7 +1363,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  margin-bottom: 1.25rem;
+  margin-bottom: .9375rem;
 }
 
 .product--listing {
@@ -1473,6 +1503,12 @@ p {
   right: 35px;
 }
 
+@media only screen and (max-width: 992px) {
+  .service--services .grid__item {
+    padding: 2.5rem 2.1875rem 8.125rem;
+  }
+}
+
 .hero {
   min-height: 100vh;
   background-position: center;
@@ -1487,7 +1523,7 @@ p {
   min-height: 584px;
   flex-direction: column;
   justify-content: center;
-  padding: 0 30px 0 104px;
+  padding-inline: 104px 30px;
   display: flex;
   overflow: hidden;
 }
@@ -1590,7 +1626,6 @@ p {
 
 .categories {
   background-color: var(--color-white);
-  letter-spacing: -.03rem;
   padding: 4.0625rem 0;
 }
 
@@ -1776,7 +1811,7 @@ p {
 .portfolio__grid {
   grid-template-columns: repeat(3, minmax(300px, 395px));
   justify-content: center;
-  gap: 3.75rem 1.25rem;
+  gap: 4.0625rem 1.25rem;
   display: grid;
 }
 
@@ -1977,19 +2012,19 @@ p {
 
 @media only screen and (max-width: 1280px) {
   .gallery .grid__item {
-    height: 377px;
+    min-height: 377px;
   }
 }
 
 @media only screen and (max-width: 992px) {
   .gallery .grid__item {
-    height: 277px;
+    min-height: 277px;
   }
 }
 
 @media only screen and (max-width: 576px) {
   .gallery .grid__item {
-    height: 200px;
+    min-height: 200px;
   }
 }
 
@@ -2018,7 +2053,7 @@ p {
 }
 
 .solution__inner {
-  grid-template-columns: 392px 594px;
+  grid-template-columns: minmax(300px, 392px) minmax(400px, 594px);
   align-self: flex-end;
   gap: 25px;
   display: grid;
@@ -2095,7 +2130,7 @@ p {
   font-size: 40px;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
   .solution__inner {
     grid-template-columns: 1fr;
     justify-content: center;
@@ -2114,7 +2149,9 @@ p {
   .solution__inner--reverse .solution__content, .solution__inner--reverse .solution__picture {
     grid-column: auto;
   }
+}
 
+@media only screen and (max-width: 992px) {
   .solution .solution__inner:not(:last-child) {
     margin-bottom: 2.5rem;
   }

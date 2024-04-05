@@ -19,8 +19,7 @@
   transition-property: background-color, color, border-color;
   transition-duration: 0.2s;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--color-blue-800) !important;
     background-color: var(--color-white);
   }
@@ -31,8 +30,7 @@
     color: var(--color-blue-800);
     background-color: var(--color-white);
 
-    &:hover,
-    &:focus {
+    &:hover {
       border-color: transparent;
       color: var(--color-white) !important;
       background-color: var(--color-blue-200);
@@ -48,6 +46,7 @@
   &--request {
     font-size: 20px;
     color: var(--color-white);
+    margin: 0;
     padding: 18px 64px;
   }
 
@@ -69,10 +68,10 @@
       background-repeat: no-repeat;
       transition-property: filter;
       transition-duration: 0.2s;
+      filter: var(--filter-white);
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       &::after {
         filter: var(--filter-blue-800);
       }
@@ -80,6 +79,14 @@
   }
 
   &--open {
+    &:hover {
+      background-color: var(--color-white);
+
+      &::after {
+        filter: var(--filter-blue-800);
+      }
+    }
+
     &::after {
       transform: translateY(-53%) rotate(180deg);
     }
@@ -87,16 +94,14 @@
 
   @include media(tablet-wide) {
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--color-white) !important;
       background-color: var(--color-blue-200);
     }
 
     &--user {
 
-      &:hover,
-      &:focus {
+      &:hover {
         border-color: transparent;
         color: var(--color-blue-800) !important;
         background-color: var(--color-white);
@@ -104,8 +109,9 @@
     }
 
     &--arrow {
-
       &:hover {
+        background-color: var(--color-white);
+
         &::after {
           filter: var(--filter-white);
         }

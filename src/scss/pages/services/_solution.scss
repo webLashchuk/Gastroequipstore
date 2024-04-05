@@ -28,7 +28,7 @@
   &__inner {
     align-self: flex-end;
     display: grid;
-    grid-template-columns: 392px 594px;
+    grid-template-columns: minmax(300px, 392px) minmax(400px, 594px);
     gap: 25px;
 
     &:not(:last-child) {
@@ -107,7 +107,7 @@
     }
   }
 
-  @include media(tablet) {
+  @include media(mobile-l) {
     &__inner {
       grid-template-columns: 1fr;
       justify-content: center;
@@ -123,10 +123,7 @@
       width: 100%;
     }
 
-    &__inner--reverse &__content {
-      grid-column: auto;
-    }
-
+    &__inner--reverse &__content,
     &__inner--reverse &__picture {
       grid-column: auto;
     }

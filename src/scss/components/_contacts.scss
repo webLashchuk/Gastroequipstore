@@ -10,11 +10,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  & .container {
+  .container {
     z-index: 1;
   }
 
-  & .title {
+  .title {
     color: var(--color-white);
     line-height: 1.25;
     margin-bottom: 0;
@@ -70,6 +70,7 @@
   }
 
   label {
+    position: relative;
     display: block;
     margin-bottom: 24px;
     font-size: 16px;
@@ -78,21 +79,23 @@
       margin-bottom: 48px;
     }
 
-    &:nth-child(1) {
-      input {
-        &::placeholder {
-          background: var(--user) no-repeat;
-          background-position: left center;
-        }
+    &:nth-child(1),
+    &:nth-child(2) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 18px;
+        left: 20px;
+        background: var(--user) no-repeat;
+        background-position: left center;
+        width: 24px;
+        height: 24px;
       }
     }
 
     &:nth-child(2) {
-      input {
-        &::placeholder {
-          background: var(--mail) no-repeat;
-          background-position: left center;
-        }
+      &::before {
+        background: var(--mail) no-repeat;
       }
     }
 
@@ -107,12 +110,7 @@
     background-color: var(--color-white);
 
     &::placeholder {
-      padding-left: 36px;
       transition: color .2s, filter .3s;
-    }
-
-    &::placeholder {
-      background-size: 24px 24px;
     }
 
     &:hover::placeholder {
@@ -132,6 +130,11 @@
     }
   }
 
+  input[type="text"],
+  input[type="email"] {
+    padding-left: 55px;
+  }
+
   .btn {
     padding: 17px 80px;
   }
@@ -139,14 +142,12 @@
   @include media(tablet-wide) {
     input {
       &:hover::placeholder {
-        filter: var(--color-gray-800);
         color: var(--color-gray-800);
       }
     }
 
     a {
       &:hover {
-        filter: var(--color-gray-800);
         color: var(--color-gray-800);
       }
     }

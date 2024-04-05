@@ -104,6 +104,10 @@
         bottom: 36px;
         top: auto;
       }
+
+      @include media(tablet) {
+        padding: rem(40) rem(35) rem(130);
+      }
     }
 
     background-color: var(--color-blue-100);

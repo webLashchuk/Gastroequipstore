@@ -60,15 +60,15 @@
       padding: 0;
 
       @include media(desktop) {
-        height: 377px;
+        min-height: 377px;
       }
 
       @include media(tablet) {
-        height: 277px;
+        min-height: 277px;
       }
 
       @include media(mobile-m) {
-        height: 200px;
+        min-height: 200px;
       }
     }
   }

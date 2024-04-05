@@ -59,7 +59,7 @@
     font-size: 22px;
     font-weight: var(--fw-500);
     padding: 0;
-    margin-bottom: rem(45);
+    margin-bottom: rem(40);
   }
 
   &__text {
@@ -70,7 +70,8 @@
       font-size: 14px;
       text-transform: uppercase;
       width: 100%;
-      letter-spacing: 0.1rem;
+      letter-spacing: 0.12rem;
+      line-height: 1.5;
       color: var(--color-gray-800);
       padding: 0;
 
@@ -92,6 +93,8 @@
   }
 
   @include media(tablet-wide) {
+    padding: 135px 15px;
+
     &__arrow {
       &:hover {
         color: var(--color-blue-800);
@@ -104,23 +107,17 @@
   }
 
   @include media(mobile-l) {
-    padding: 130px 15px 130px;
+    padding: 100px 15px;
 
     &__inner {
       flex-direction: column;
     }
 
-    .product-image {
+    .product-image,
+    img,
+    .text {
       max-width: 100%;
       width: 100%;
-    }
-
-    img {
-      width: 100%;
-    }
-
-    &__text {
-      max-width: 100%;
     }
   }
 }
