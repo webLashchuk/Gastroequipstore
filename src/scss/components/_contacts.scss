@@ -30,7 +30,7 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    border-radius: var(--radius-main);
+    border-radius: calc(var(--radius-main) - 4px);
     padding: rem(62) rem(60) rem(93);
     font-size: 14px;
     width: 100%;

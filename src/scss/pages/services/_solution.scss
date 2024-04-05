@@ -4,13 +4,14 @@
 .solution {
   $root: &;
   background-color: var(--color-white);
-  letter-spacing: -0.03rem;
-  padding: rem(70) 0 rem(57);
+  padding: rem(76) 0 rem(57);
 
   h2 {
+    line-height: 1.3;
+
     +p {
       color: var(--color-blue-600);
-      margin-bottom: rem(56);
+      margin-bottom: rem(60);
       letter-spacing: 0.03rem;
     }
   }
@@ -69,13 +70,13 @@
   }
 
   &__item {
-  margin-bottom: rem(15);
-  list-style-type: disc;
-  list-style-position: outside;
-  color: var(--color-blue-600);
-  line-height: 1;
-  margin-left: 25px;
-}
+    margin-bottom: rem(15);
+    list-style-type: disc;
+    list-style-position: outside;
+    color: var(--color-blue-600);
+    line-height: 1;
+    margin-left: 25px;
+  }
 
   &__picture {
     img {

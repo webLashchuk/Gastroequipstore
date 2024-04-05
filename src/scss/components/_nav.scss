@@ -101,6 +101,7 @@
 
     @include media(mobile-s) {
       flex-direction: column;
+      gap: 30px;
     }
   }
 

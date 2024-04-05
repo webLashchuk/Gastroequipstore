@@ -33,6 +33,22 @@
       align-self: start;
       grid-column: 2 /3;
     }
+
+    @include media(tablet-wide) {
+      grid-template-columns: repeat(var(--column), 1fr 4fr);
+    }
+
+    @include media(mobile-l) {
+      grid-template-columns: repeat(var(--column), 1fr 6fr);
+    }
+
+    @include media(mobile-s) {
+      grid-template-columns: repeat(var(--column), 1fr);
+
+      h3 {
+        grid-column: 1/2;
+      }
+    }
   }
 
   &[data-items="5"] {

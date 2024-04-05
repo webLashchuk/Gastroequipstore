@@ -2,10 +2,12 @@
 @use "../utils/mixins"as*;
 
 .product {
-  position: relative;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
+  a {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
   h3 {
     font-size: 22px;
@@ -40,6 +42,7 @@
 
   &--listing {
     max-width: 392px;
+    width: 100%;
 
     @include media(desktop) {
       max-width: 100%;
@@ -49,6 +52,7 @@
       max-width: 392px;
       width: 100%;
       height: 392px;
+      margin-bottom: rem(15);
 
       @include media(desktop) {
         max-width: 100%;

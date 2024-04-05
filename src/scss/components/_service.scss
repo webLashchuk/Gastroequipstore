@@ -4,83 +4,108 @@
 .service {
   padding: rem(65) 0 rem(65);
 
-  &--home {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 
-      &__item {
-        display: flex;
-        flex-direction: column;
-        padding: rem(125) rem(35) rem(20);
-        height: 100%;
-        position: relative;
-        border: 2px solid var(--color-blue-400);
-        border-radius: calc(var(--radius-main) * 2 - 4px);
+    @include media(mobile-m) {
+      grid-template-columns: 1fr;
+    }
 
+    &__item {
+      display: flex;
+      height: 100%;
+      position: relative;
+      border: 2px solid var(--color-blue-400);
+      border-radius: calc(var(--radius-main) * 2 - 4px);
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 35px;
+        top: 34px;
+        width: 100px;
+        height: 100px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include media(mobile-l) {
+          width: 80px;
+          height: 64px;
+        }
+      }
+
+      p {
+        max-width: 233px;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 0.12rem;
+        margin: auto 0 7px;
+      }
+
+      h3 {
+        font-size: 42px;
+
+        @include media(tablet-wide) {
+          font-size: 28px;
+        }
+      }
+
+      &--planning {
         &::before {
-          content: "";
-          position: absolute;
-          right: 35px;
-          top: 34px;
-          width: 100px;
-          height: 100px;
-          background-position: center;
-          background-size: contain;
-          background-repeat: no-repeat;
-
-          @include media(mobile-l) {
-            width: 80px;
-            height: 64px;
-          }
+          background-image: url("../images/icons/planning.svg");
         }
+      }
 
-        p {
-          max-width: 233px;
-          text-transform: uppercase;
-          font-size: 14px;
-          line-height: 1.5;
-          letter-spacing: 0.12rem;
-          margin: auto 0 7px;
+      &--procurement {
+        &::before {
+          background-image: url("../images/icons/procurement.svg");
         }
+      }
 
-        h3 {
-          font-size: 42px;
-
-          @include media(tablet-wide) {
-            font-size: 28px;
-          }
+      &--installation {
+        &::before {
+          background-image: url("../images/icons/installation.svg");
         }
+      }
 
-        &--planning {
-          &::before {
-            background-image: url("../images/icons/planning.svg");
-          }
+      &--customization {
+        &::before {
+          background-image: url("../images/icons/customization.svg");
         }
+      }
 
-        &--procurement {
-          &::before {
-            background-image: url("../images/icons/procurement.svg");
-          }
-        }
+    }
+  }
 
-        &--installation {
-          &::before {
-            background-image: url("../images/icons/installation.svg");
-          }
-        }
+  &--home {
+    .grid__item {
+      padding: rem(125) rem(35) rem(20);
+      flex-direction: column;
 
-        &--customization {
-          &::before {
-            background-image: url("../images/icons/customization.svg");
-          }
-        }
-
+      &::before {
+        right: 35px;
+        top: 34px;
       }
     }
   }
 
   &--services {
+
+    .grid__item {
+      display: flex;
+      padding: rem(40) rem(35) rem(65);
+      flex-direction: column-reverse;
+
+      &::before {
+        right: 35px;
+        bottom: 36px;
+        top: auto;
+      }
+    }
+
     background-color: var(--color-blue-100);
   }
 }

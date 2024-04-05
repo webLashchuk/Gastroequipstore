@@ -29,15 +29,12 @@
     }
   }
 
-  .logo {
-    position: fixed;
-    z-index: 1;
-    align-self: flex-start;
-    max-width: 170px;
-    top: 15px;
-    left: 15px;
-    order: 1;
-    align-self: flex-start;
+  .logo:not(.logo--tablet) {
+    display: none;
+    filter: invert(97%) sepia(7%) saturate(33%) hue-rotate(97deg) brightness(94%) contrast(93%);
+  }
+
+  .logo--tablet {
     filter: invert(97%) sepia(7%) saturate(33%) hue-rotate(97deg) brightness(94%) contrast(93%);
   }
 }

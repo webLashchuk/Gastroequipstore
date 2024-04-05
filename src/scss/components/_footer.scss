@@ -23,6 +23,10 @@
   .nav {
     &__inner {
       justify-content: flex-end;
+
+      @include media(tablet) {
+        margin-bottom: rem(15);
+      }
     }
 
     &__list {
@@ -41,6 +45,10 @@
 
         @include media(tablet-wide) {
           margin-right: 20px;
+        }
+
+        @include media(mobile-m) {
+          margin-right: 0px;
         }
       }
     }
